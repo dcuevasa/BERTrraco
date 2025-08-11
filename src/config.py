@@ -3,7 +3,7 @@ import os
 
 # --- Configuración General de la Aplicación ---
 APP_CONFIG = {
-    "title": "BERTraco Asistente",
+    "title": "BERTrraco Asistente",
     "queue_max_size": 10
 }
 
@@ -28,7 +28,7 @@ TRANSLATION_CONFIG = {
 AUDIO_CONFIG = {
     "samples_folder": os.path.join(os.path.dirname(__file__), "../audios"),
     "pitch_range_semitones": 4,
-    "gap_ms": 10
+    "gap_ms": 5
 }
 
 # --- Configuración de la Interfaz de Usuario (Cara) ---
@@ -49,7 +49,7 @@ FACE_UI = {
 
 # --- Configuración de Animaciones ---
 ANIMATION_CONFIG = {
-    "interval_ms": 500,
+    "interval_ms": 300,
     "idle_delay_min_s": 1.5,
     "idle_delay_max_s": 5.0,
     "sleep_timeout_s": 10.0

@@ -24,10 +24,13 @@ def chat_loop(ui_controller, message_queue, audio_queue):
             pregunta_en = translate_es_to_en(pregunta_es)
             
             mensajes = build_prompt(pregunta_en, historial_en)
-            
+
+            ui_controller.start_waiting()
+
             respuesta_en_completa = "".join(llm.stream(mensajes))
             respuesta_es_completa = translate_en_to_es(respuesta_en_completa)
 
+            ui_controller.stop_waiting()
             ui_controller.start_speaking()
             ui_controller.start_assistant_message()
             

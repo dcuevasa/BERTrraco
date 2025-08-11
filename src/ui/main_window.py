@@ -70,6 +70,12 @@ class App(tk.Tk):
     def stop_speaking(self):
         self.face_canvas.stop_speaking()
 
+    def start_waiting(self):
+        self.face_canvas.start_waiting()
+
+    def stop_waiting(self):
+        self.face_canvas.stop_waiting()
+
     def _start_threads(self):
         threading.Thread(target=chat_loop, args=(self, self.message_queue, self.audio_queue), daemon=True).start()
         threading.Thread(target=audio_loop, args=(self.audio_queue,), daemon=True).start()
